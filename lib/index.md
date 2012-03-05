@@ -4,6 +4,9 @@ title: "作ったものとか"
 ---
 {% include JB/setup %}
 
+[JIT brainf*ckインタプリタ (github)](https://github.com/hogelog/bfprocessor)
+: インタプリタ高速化の例として作ったbrainf*ck実装。xbyakを使ってJITコンパイラの実装をしてる。[はてなダイアリの解説記事](http://d.hatena.ne.jp/hogelog/20100914/p1)
+
 [OStack Lua (github)](http://github.com/hogelog/ostacklua)
 : OStack Lua。GCをいじって高速化や省メモリ化などを試みているLua実装。
 
