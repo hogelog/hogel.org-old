@@ -1,9 +1,12 @@
 ---
 layout: page
 title: hoge title
-tagline: hogelogです。
 ---
 {% include JB/setup %}
+
+> もうTwitter Bootstrapでいいや思った。
+> <small>hogelog</small>
+
 - [作ったもの](/lib/)
 - [はてなダイアリー](http://d.hatena.ne.jp/hogelog/)
 - [プロフィール](http://www.hatena.ne.jp/hogelog/)
