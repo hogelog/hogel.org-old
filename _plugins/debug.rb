@@ -31,8 +31,8 @@ module Jekyll
       puts obj.pretty_inspect if stdout
       "<pre>#{obj.class}\n#{obj.pretty_inspect}</pre>"
     end
-
   end # DebugFilter
+
 end # Jekyll
 
 Liquid::Template.register_filter(Jekyll::DebugFilter)
