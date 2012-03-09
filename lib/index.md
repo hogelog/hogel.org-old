@@ -7,11 +7,14 @@ title: "作ったものとか"
 [JIT brainf*ckインタプリタ (github)](https://github.com/hogelog/bfprocessor)
 : インタプリタ高速化の例として作ったbrainf*ck実装。xbyakを使ってJITコンパイラの実装をしてる。[はてなダイアリの解説記事](http://d.hatena.ne.jp/hogelog/20100914/p1)
 
+[JavaScript terminal](/lib/terminal.html)
+: 入力したコードを実行するだけのいわゆるREPL環境。変数やオブジェクトプロパティの補完機能あり。とりあえずIE, Firefox, Safari, Operaあたりで動いてそう。 
+
 [OStack Lua (github)](http://github.com/hogelog/ostacklua)
 : OStack Lua。GCをいじって高速化や省メモリ化などを試みているLua実装。
 
 [Vimperator plugin](http://vimpr.github.com/plugins-ja.html)
-: Firefox拡張Vimperatorのプラグイン。 Greasemonkeyスクリプトなどと同様簡単に、 しかしchrome権限で強力にFirefoxの機能を容易に拡張可能。 割と頭悪いプラグインをいくつか。
+: Firefox拡張Vimperatorのプラグイン。 Greasemonkeyスクリプトなどと同様簡単に、 しかしchrome権限で強力にFirefoxの機能を容易に拡張可能。頭悪いプラグインをいくつか作成。
 
 [copying gc (github)](http://github.com/hogelog/copying_gc)
 : 習作のCopying GC。管理領域は固定長のExact GC。

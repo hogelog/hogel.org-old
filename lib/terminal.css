@@ -1,0 +1,49 @@
+#terminal{
+  background: black;
+  color: white;
+  width: 50em;
+  padding: 2px;
+  font-family: monospace;
+}
+#terminal input{
+  background: #222;
+  color: white;
+  border: solid thin #543;
+  width: 40em;
+  display: inline;
+}
+#terminal div, #terminal .line, #terminal input{
+  margin: 0px;
+  padding: 0px;
+}
+
+.highlight {
+  color: yellow;
+}
+.error {
+  color: red;
+}
+.history {
+  color: gray;
+}
+
+#suggest {
+    position: absolute;
+    background-color: #f0fff0;
+    /*border: 1px solid #CCCCFF;*/
+    border: none;
+    font-size: 90%;
+}
+#suggest div {
+    color: black;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+#suggest div.select{ /* キー上下で選択した場合のスタイル */
+    color: #FFFFFF;
+    background-color: #3366FF;
+}
+#suggest div.over{ /* マウスオーバ時のスタイル */
+    background-color: #99CCFF;
+}
