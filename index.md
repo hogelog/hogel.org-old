@@ -2,7 +2,6 @@
 layout: page
 title: hoge title
 ---
-{% include JB/setup %}
 
 > もうTwitter Bootstrapでいいや思った。
 > <small>hogelog</small>

@@ -1,5 +1,5 @@
 #terminal{
-  background: black;
+  background: #333;
   color: white;
   width: 50em;
   padding: 2px;
@@ -18,10 +18,10 @@
 }
 
 .highlight {
-  color: yellow;
+  color: #ff5;
 }
 .error {
-  color: red;
+  color: #f55;
 }
 .history {
   color: gray;
@@ -40,10 +40,11 @@
     overflow: hidden;
     white-space: nowrap;
 }
-#suggest div.select{ /* キー上下で選択した場合のスタイル */
+#suggest div.select{ /* 繧ｭ繝ｼ荳贋ｸ九〒驕ｸ謚槭＠縺溷ｴ蜷医�ｮ繧ｹ繧ｿ繧､繝ｫ */
     color: #FFFFFF;
     background-color: #3366FF;
 }
-#suggest div.over{ /* マウスオーバ時のスタイル */
+#suggest div.over{ /* 繝槭え繧ｹ繧ｪ繝ｼ繝先凾縺ｮ繧ｹ繧ｿ繧､繝ｫ */
     background-color: #99CCFF;
 }
+

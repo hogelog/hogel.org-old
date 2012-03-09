@@ -2,10 +2,9 @@
 layout: page
 title: JavaScript terminal
 ---
-{% include JB/setup %}
 
-<div id="terminal">
-  <div class="line highlight">JavaScript read eval print loop</div>
+<div id="terminal" class="well">
+  <div class="line highlight"><b>JavaScript read eval print loop</b></div>
   <div id="inputline" class="line">jstalk&gt; <input type="text" id="input" autocomplete="off"></input></div>
   <div id="suggest"></div>
 </div>
