@@ -1,0 +1,8 @@
+@import "../base.css";
+
+dt{
+    background-color:#88bbef;
+}
+dd{
+    margin-bottom:1em;
+}

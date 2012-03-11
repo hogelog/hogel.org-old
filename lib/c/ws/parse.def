@@ -1,0 +1,15 @@
+read_A_C, DUP, SWAP, DISCARD, ERROR, fun:read_A_C
+read_A_B, REF, ERROR, SLIDE, ERROR, fun:read_A_B
+read_A, PUSH, fun:read_A_B, fun:read_A_C, ERROR, fun:read_A
+read_BA_A, PLUS, MINUS, TIMES, ERROR, fun:read_BA_A
+read_BA_B, DIVIDE, MODULO, ERROR, ERROR, fun:read_BA_B
+read_BA, fun:read_BA_A, fun:read_BA_B, ERROR, ERROR, fun:read_BA
+read_BB, STORE, RETRIEVE, ERROR, ERROR, fun:read_BB
+read_C_A, LABEL, CALL, JUMP, ERROR, fun:read_C_A
+read_C_B, IZ_JUMP, IN_JUMP, RETURN, ERROR, fun:read_C_B
+read_C_C, ERROR, ERROR, END, ERROR, fun:read_C_C
+read_C, fun:read_C_A, fun:read_C_B, fun:read_C_C, ERROR, fun:read_C
+read_BC_A, OUTPUTC, OUTPUTN, ERROR, ERROR, fun:read_BC_A
+read_BC_B, READC, READN, ERROR, ERROR, fun:read_BC_B
+read_BC, fun:read_BC_A, fun:read_BC_B, ERROR, ERROR, fun:read_BC
+read_B, fun:read_BA, fun:read_BB, fun:read_BC, ERROR, fun:read_B

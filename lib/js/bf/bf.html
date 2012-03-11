@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="bf.css" media="screen">
+<title>Javascript Brainf*ck Interpreter</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="bf.js"></script>
+<script type="text/javascript"><!--
+$(function(){
+  $("#bfrun").click(function(){
+    var bf = BF($("#code")[0].value, $("#input")[0].value);
+    var output = bf.execute();
+    $("#output").text(output);
+  });
+});
+// -->
+</script></head>
+<body>
+<h1>Javascript Brainf*ck Interpreter</h1>
+<div class="box">
+<h2>code</h2>
+<textarea id="code">print Hello World!
+
+&gt;+++++++++[&lt;++++++++&gt;-]&lt;.&gt;+++++++[&lt;++++&gt;-]&lt;+.+++++++..+++.[-]&gt;++++++++[&lt;++
+++&gt;-]&lt;.&gt;+++++++++++[&lt;+++++&gt;-]&lt;.&gt;++++++++[&lt;+++&gt;-]&lt;.+++.------.--------.[-]&gt;
+++++++++[&lt;++++&gt;-]&lt;+.[-]++++++++++.</textarea>
+<input type="submit" id="bfrun" value="run">
+<h2>input</h2>
+<textarea id="input"></textarea>
+<h2>output</h2>
+<pre id="output"></pre>
+</div>
+</body></html>

@@ -1,0 +1,288 @@
+hoge hoge
+----
+うごくかなー
+----
+テスト
+----
+何の因果か
+----
+めぐりあわせた
+みなさん
+----
+こんばんは
+----
+眠いです。
+----
+それは
+さておき
+----
+プレゼン資料
+とか、ないよ
+(12/20 11:24)
+----
+なんかみんな
+ちゃんと
+つくってる！
+----
+やべえええ
+(12/20 16:06)
+----
+University of
+Electro-
+Communications
+----
+University
+Electro-
+----
+versit
+ectr
+----
+it
+tr
+----
+t！
+t！
+----
+T大オフ
+参加資格
+ありすぎ
+----
+いぢめてください(＞＜)
+----
+留年
+二回
+したよ！
+----
+留年しない
+とか
+----
+妹がいるけど
+血が繋がってる
+くらい
+----
+無意味
+----
+みんな留年しろ
+----
+趣味でも
+紹介
+----
+小説とか
+----
+基本ラノベ
+----
+鉄コミュニケーション、EGコンバット、ディバイデッド・フロント、
+導きの星、ガンパレードマーチ、サムライレンズマン、
+ストレイトジャケット、
+----
+恐怖！
+なんでも
+ラノベに見える病
+----
+「八つ墓村」は
+キャラ萌え小説
+----
+弟くん(主人公)が
+好きで好きで
+しょうがない姉
+----
+血の繋りは無い
+けれど主人公を
+兄さまと呼ぶ幼女
+----
+乱杭歯の尼さん
+----
+最後の方出てくる
+脇役探偵金田一
+----
+でもかなしいけどこれ
+ミステリ小説なのよね
+----
+さよなら○○……
+----
+げんごとか
+----
+このプレゼンツール
+----
+import javax.swing.JFrame
+import javax.swing.JTextArea
+import java.awt.GraphicsEnvironment
+import java.awt.GraphicsDevice
+import java.io.IOException
+import java.io.FileReader
+import java.io.BufferedReader
+import java.awt.Dimension
+import java.awt.Color
+import java.awt.Font
+import java.awt.event.MouseAdapter
+import java.awt.event.MouseEvent
+import java.awt.event.KeyAdapter
+import java.awt.event.KeyEvent
+import scala.collection.mutable.ArrayBuffer
+
+object Presc{
+  object screen extends JFrame{}
+  val device = GraphicsEnvironment.getLocalGraphicsEnvironment.getDefaultScreenDevice
+  val dmode = device.getDisplayMode
+  val screensize = new Dimension(dmode.getWidth, dmode.getHeight)
+----
+  object presArea extends JTextArea{
+    var curpage = 0
+    var prespages = new ArrayBuffer[String]
+    def fitArea() : Unit = {
+      var lfont = presArea.getFont
+      var fontsize = 1.0
+      var prefsize : Dimension = null
+      do{
+        fontsize += 10.0
+        lfont = lfont.deriveFont(fontsize.asInstanceOf[Float])
+        setFont(lfont)
+        prefsize = getPreferredSize
+      } while(prefsize.width < screensize.width && prefsize.height < screensize.height);
+      while(prefsize.width > screensize.width || prefsize.height > screensize.height){
+        fontsize -= 1.0
+        lfont = lfont.deriveFont(fontsize.asInstanceOf[Float])
+        setFont(lfont)
+        prefsize = getPreferredSize
+      }
+    }
+----
+    def pageNext() : Unit ={
+      curpage += 1
+      if(curpage >= prespages.size){
+        curpage = 0
+      }
+      setPageNum(curpage)
+    }
+    def pagePrev() : Unit ={
+      curpage -= 1
+      if(curpage < 0){
+        curpage = prespages.size - 1
+      }
+      setPageNum(curpage)
+    }
+    def setPageNum(pagenum : Int) : Unit = {
+      setText(prespages(pagenum))
+      fitArea
+    }
+    def addPage(page : String) : Unit = {
+      prespages += page
+    }
+  }
+  object cycleMouseListener extends MouseAdapter{
+    override def mousePressed(e: MouseEvent) : Unit = {
+      e.getButton match{
+        case MouseEvent.BUTTON1 => presArea.pagePrev
+        case MouseEvent.BUTTON3 => presArea.pageNext
+        case x => println(x)
+      }
+    }
+  }
+----
+  def main(args: Array[String]){
+    if(args.length == 1){
+      val presfile = new BufferedReader(new FileReader(args(0)))
+      var page = ""
+      var line: String = null
+      while((line=presfile.readLine)==() && line!=null){
+        if(line=="----"){
+          println(page)
+          presArea.addPage(page)
+          page = ""
+        }
+        else{
+          page += (line + "\r\n")
+        }
+      }
+      if(page != ""){
+        presArea.addPage(page)
+      }
+----
+      presArea.setEditable(false)
+      presArea.addMouseListener(cycleMouseListener)
+
+      screen.add(presArea)
+      screen.setUndecorated(true)
+      screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)
+      device.setFullScreenWindow(screen)
+
+      presArea.setPageNum(0)
+    }
+  }
+}
+----
+見てのとおり
+----
+Schemeの次に
+メジャーな言語
+----
+Scalaですね
+----
+昨晩カッとなって
+つくった
+----
+好きなの
+----
+のーみそコネコネ！
+のーみそコネコネ！
+----
+Brainfuck
+----
+脳髄f*ck
+とか
+ちょっと萌え
+----
+Scheme
+----
+C
+----
+Java
+----
+Scala
+----
+JavaScript
+----
+ゆく
+----
+なんか
+あったっけ
+----
+Scheme
+処理系書いたり
+----
+PHPでコード
+コピペしたり
+……
+----
+あとまあ
+ふつうに5年生
+----
+くる
+----
+来年
+24歳なっても
+----
+週10回は
+----
+いや別にしたくないけど
+----
+ただの日課だし……
+----
+あとまあ
+修士
+いきます
+----
+CPUとか
+いじるとこ
+かなー
+----
+あー
+----
+hogelog
+----
+小室 直
+こむろ すなお
+----
+SICP
+は1章しか
+----

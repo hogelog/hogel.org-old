@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+/*
+  ほげほげ
+*/
+
+body{
+    background-color:#efeff0;
+	color:#004624;
+}
+
+h1,h2{ font-size:100%;margin-bottom:0px}
+.box{
+      background:#c9c9c9;
+      border:solid 1px;
+      width:60%;
+      margin-left:5%;
+}
+#code,#input,#output{
+	width:90%;
+	height:8em;
+}
+pre{
+	border:solid 1px;
+	background:white;
+	color:black;
+}

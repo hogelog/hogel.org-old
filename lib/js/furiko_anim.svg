@@ -1,0 +1,86 @@
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width="600" height="600" viewBox="0 0 600 600">
+<title>振り子の運動</title>
+<!-- まとめて Translate 単なる表示の調節 -->
+<g id="canvas" transform="translate(300,100)">
+<g id="furiko">
+<path id="sasae" d="M0,0 l0,0" stroke="black" />
+<circle id="omori" cx="0" cy="0" r="20" stroke="black" fill="none" />
+<script type="text/ecmascript">
+<![CDATA[
+var Pi = 3.141592653589793;
+var G = 9.8;
+var L = 100*G/4;
+var funcs = [
+	function(t, vec){
+		return vec[1];
+	},
+	function(t, vec){
+		return -(1/(L+vec[2]))*(G*Math.sin(vec[0])+2*vec[1]*vec[3]);
+	},
+	function(t, vec){
+		return vec[3];
+	},
+	function(t, vec){
+		return ((L+vec[2]))*Math.pow(vec[1],2)+G*Math.cos(vec[0])-2*vec[2];
+  	}
+];
+function evalFuncs(time, funcs, vec){
+  var newvec = new Array();
+  for(var i=0;i<funcs.length;++i){
+    newvec[i] = funcs[i](time, vec);
+  }
+  return newvec;
+}
+function addVector(v1, v2){
+  var newvec = new Array();
+  for(var i=0;i<v1.length;++i){
+    newvec[i] = v1[i] + v2[i];
+  }
+  return newvec;
+}
+function mulVector(cval, vec){
+  var newvec = new Array();
+  for(var i=0;i<vec.length;++i){
+    newvec[i] = cval*vec[i];
+  }
+  return newvec;
+}
+function printData(t, vec){
+  var theta = vec[0];
+  var xi = vec[2];
+  var x = (L+xi)*Math.sin(theta);
+  var y = (L+xi)*Math.cos(theta);
+  theta = -theta*180/Pi;
+  document.getElementById("sasae").setAttribute("d", "M0,0 L"+x+","+y);
+  document.getElementById("omori").setAttribute("cx", x);
+  document.getElementById("omori").setAttribute("cy", y);
+}
+var vector = [
+  Pi/(2*(311048%3+1)),
+  0.0,
+  L/2,
+  0.0,
+];
+var t_h = 0.1;
+function step(time, funcs, vec){
+  var k1, k2, k3, k4;
+  k1 = evalFuncs(time, funcs, vec);
+  k2 = evalFuncs(time+t_h/2, funcs, addVector(vec, mulVector(t_h/2, k1)));
+  k3 = evalFuncs(time+t_h/2, funcs, addVector(vec, mulVector(t_h/2, k2)));
+  k4 = evalFuncs(time+t_h, funcs, addVector(vec, mulVector(t_h, k3)));
+  vec = addVector(vec, mulVector(t_h/6, k1));
+  vec = addVector(vec, mulVector(t_h/3, k2));
+  vec = addVector(vec, mulVector(t_h/3, k3));
+  vec = addVector(vec, mulVector(t_h/6, k4));
+
+  printData(time, vec);
+  setTimeout(function(){step(time+t_h,funcs,vec)}, 10);
+}
+step(0.0, funcs, vector);
+
+]]>
+</script>
+</g>
+</g>
+
+</svg>
