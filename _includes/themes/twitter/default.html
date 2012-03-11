@@ -42,7 +42,11 @@
 
     <div class="container">
       <div class="subnav subnav-fixed">
-        {{ page.url | breadcrumb }}
+        {% if page.breadpath %}
+          {{ page.breadpath | breadcrumb }}
+        {% else %}
+          {{ page.url | breadcrumb }}
+        {% endif %}
       </div>
 
       <div class="content">

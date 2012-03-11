@@ -6,7 +6,7 @@ title: "作ったものとか"
 [JIT brainf*ckインタプリタ (github)](https://github.com/hogelog/bfprocessor)
 : インタプリタ高速化の例として作ったbrainf*ck実装。xbyakを使ってJITコンパイラの実装をしてる。[はてなダイアリの解説記事](http://d.hatena.ne.jp/hogelog/20100914/p1)
 
-[JavaScript terminal](/lib/terminal.html)
+[JavaScript terminal](/lib/js/terminal.html)
 : 入力したコードを実行するだけのいわゆるREPL環境。変数やオブジェクトプロパティの補完機能あり。とりあえずIE, Firefox, Safari, Operaあたりで動いてそう。 
 
 [OStack Lua (github)](http://github.com/hogelog/ostacklua)

@@ -1,18 +1,18 @@
 #terminal{
   background: #333;
   color: white;
-  width: 50em;
+  width: 60em;
   padding: 2px;
   font-family: monospace;
 }
 #terminal input{
-  background: #222;
   color: white;
-  border: solid thin #543;
-  width: 40em;
+  width: 50em;
   display: inline;
 }
 #terminal div, #terminal .line, #terminal input{
+  background: #333;
+  border: none;
   margin: 0px;
   padding: 0px;
 }
