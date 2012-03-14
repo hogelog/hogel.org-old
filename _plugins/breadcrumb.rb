@@ -1,3 +1,4 @@
+STDERR.puts("################hoge!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 module Jekyll
   module BreadcrumbFilter
     def breadcrumb(url, stdout=false)
