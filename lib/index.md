@@ -3,6 +3,9 @@ layout: page
 title: "作ったものとか"
 ---
 
+[Simple Kestrel Client (github)](https://github.com/hogelog/simple-kestrel-client)
+: KestrelをサクッとJavaから使うためのライブラリ。今のところ[Finagle](http://twitter.github.com/finagle/)の単純なラッパー。
+
 [JIT brainf*ckインタプリタ (github)](https://github.com/hogelog/bfprocessor)
 : インタプリタ高速化の例として作ったbrainf*ck実装。xbyakを使ってJITコンパイラの実装をしてる。[はてなダイアリの解説記事](http://d.hatena.ne.jp/hogelog/20100914/p1)
 
