@@ -1,6 +1,6 @@
 ---
-layout: page
 title: "作ったものとか"
+date: 2017-10-16T22:20:55+09:00
 ---
 
 [Simple Kestrel Client (github)](https://github.com/hogelog/simple-kestrel-client)
